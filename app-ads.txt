@@ -1,0 +1,4 @@
+# Put this file at the ROOT of the website you enter as "developer website" in both stores
+# e.g. https://yourname.github.io/app-ads.txt
+# Replace pub-XXXXXXXXXXXXXXXX with your AdMob publisher ID (AdMob → Settings → Account information)
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
