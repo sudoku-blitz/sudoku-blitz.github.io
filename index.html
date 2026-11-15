@@ -1,6 +1,35 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sudoku Rush</title>
-<style>body{font-family:system-ui,sans-serif;max-width:620px;margin:60px auto;padding:0 20px;line-height:1.6;color:#222;text-align:center}a{color:#3d48a3}</style></head>
-<body><h1>Sudoku Rush</h1><p>Solve fast. Stay alive.</p>
-<p><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></p>
-<p>Contact: <a href="mailto:zafalonliam.b@gmail.com">zafalonliam.b@gmail.com</a></p></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sudoku Flash – fast Sudoku against the clock</title>
+<meta name="description" content="Sudoku against the clock, plus a new daily Sudoku with a leaderboard. Free on Android and iPhone.">
+<meta property="og:title" content="Sudoku Flash"><meta property="og:description" content="Can you beat my time? Play today's Daily Sudoku.">
+<style>
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0e1124;color:#fff;text-align:center;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px;box-sizing:border-box}
+h1{font-size:44px;line-height:1;margin:10px 0 4px;letter-spacing:1px}h1 span{color:#ffb020;display:block;font-size:56px}
+p{color:#a7acd9;font-size:18px;margin:8px 0 26px}
+.btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:300px}
+.btns a{display:block;padding:16px;border-radius:14px;font-weight:800;font-size:18px;text-decoration:none;color:#2a1a00;background:#ffb020;box-shadow:0 4px 0 #b97400}
+.btns a.ios{background:#fff;color:#111;box-shadow:0 4px 0 #999}
+.btns a.soon{opacity:.45;pointer-events:none}
+.grid{display:grid;grid-template-columns:repeat(3,46px);gap:6px;transform:rotate(-8deg);margin-bottom:14px}
+.grid i{height:46px;border-radius:10px;background:#1c2150;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:24px}
+.grid i.a{background:#ffb020;color:#2a1a00}.grid i.b{background:#ff4f7a}
+footer{margin-top:40px;font-size:14px;color:#6c72a8}footer a{color:#a7acd9}
+</style></head>
+<body>
+<div class="grid"><i>3</i><i class="a">1</i><i>4</i><i class="b">2</i><i>9</i><i>6</i><i>5</i><i>8</i><i class="a">7</i></div>
+<h1>SUDOKU<span>FLASH</span></h1>
+<p>Solve fast. Stay alive.<br>New Daily Sudoku every day.</p>
+<div class="btns">
+  <!-- Replace the links once the app is live -->
+  <a id="play" href="https://play.google.com/store/apps/details?id=com.puzzleblitz.sudoku">▶ Get it on Google Play</a>
+  <a id="ios" class="ios soon" href="#"> Download on the App Store</a>
+</div>
+<footer><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a> · <a href="mailto:zafalonliam.b@gmail.com">Contact</a></footer>
+<script>
+  // Opened on a phone? Send people straight to their store.
+  var ua = navigator.userAgent, ios = document.getElementById('ios'), play = document.getElementById('play');
+  if (/android/i.test(ua) && play.href) location.replace(play.href);
+  else if (/iphone|ipad|ipod/i.test(ua) && !ios.classList.contains('soon')) location.replace(ios.href);
+</script>
+</body></html>
