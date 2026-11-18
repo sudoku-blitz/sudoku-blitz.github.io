@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sudoku Flash – fast Sudoku against the clock</title>
-<meta name="description" content="Sudoku against the clock, plus a new daily Sudoku with a leaderboard. Free on Android and iPhone.">
-<meta property="og:title" content="Sudoku Flash"><meta property="og:description" content="Can you beat my time? Play today's Daily Sudoku.">
+<meta name="description" content="Sudoku against the clock, plus a new daily Sudoku with a leaderboard. Free on iPhone.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://sudoku-blitz.github.io/">
+<meta property="og:title" content="Sudoku Flash – can you beat me?"><meta property="og:description" content="Sudoku in 30 seconds: combos, a new daily puzzle and 36 ranks. Free on iPhone.">
+<meta property="og:image" content="https://sudoku-blitz.github.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://sudoku-blitz.github.io/og-image.png">
+<meta name="apple-itunes-app" content="app-id=6835100438">
 <style>
 body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0e1124;color:#fff;text-align:center;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px;box-sizing:border-box}
 h1{font-size:44px;line-height:1;margin:10px 0 4px;letter-spacing:1px}h1 span{color:#ffb020;display:block;font-size:56px}
@@ -21,15 +25,15 @@ footer{margin-top:40px;font-size:14px;color:#6c72a8}footer a{color:#a7acd9}
 <h1>SUDOKU<span>FLASH</span></h1>
 <p>Solve fast. Stay alive.<br>New Daily Sudoku every day.</p>
 <div class="btns">
-  <!-- Replace the links once the app is live -->
-  <a id="play" href="https://play.google.com/store/apps/details?id=com.puzzleblitz.sudoku">▶ Get it on Google Play</a>
-  <a id="ios" class="ios soon" href="#"> Download on the App Store</a>
+  <!-- Android: remove class="soon" once the app is live on Google Play -->
+  <a id="ios" class="ios" href="https://apps.apple.com/app/id6835100438"> Download on the App Store</a>
+  <a id="play" class="soon" href="https://play.google.com/store/apps/details?id=com.puzzleblitz.sudoku">▶ Google Play · coming soon</a>
 </div>
-<footer><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a> · <a href="mailto:zafalonliam.b@gmail.com">Contact</a></footer>
+<footer><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a> · <a href="mailto:sudokuflash.support@gmail.com">Contact</a> · <a href="legal-notice.html">Legal notice</a></footer>
 <script>
   // Opened on a phone? Send people straight to their store.
   var ua = navigator.userAgent, ios = document.getElementById('ios'), play = document.getElementById('play');
-  if (/android/i.test(ua) && play.href) location.replace(play.href);
+  if (/android/i.test(ua) && !play.classList.contains('soon')) location.replace(play.href);
   else if (/iphone|ipad|ipod/i.test(ua) && !ios.classList.contains('soon')) location.replace(ios.href);
 </script>
 </body></html>
